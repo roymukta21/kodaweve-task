@@ -1,29 +1,23 @@
-// import { BrowserRouter, Routes, Route } from "react-router";
-
+import { createBrowserRouter } from "react-router";
+import RootLayout from "../layouts/RootLayout";
 import Home from "../pages/Home";
 import Services from "../pages/Services";
 import About from "../pages/About";
 import Blog from "../pages/Blog";
 import BlogDetails from "../pages/BlogDetails";
 import Contact from "../pages/Contact";
-import { BrowserRouter, Route, Routes } from "react-router";
 
-const Router = () => {
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/blog" element={<Blog />} />
-        <Route path="/blog/:id" element={<BlogDetails />} />
-        <Route path="/contact" element={<Contact />} />
-
-        {/* 404 Page */}
-        <Route path="*" element={<h1 className="text-white text-center mt-20">404 Not Found</h1>} />
-      </Routes>
-    </BrowserRouter>
-  );
-};
-
-export default Router;
+export const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <RootLayout />,
+    children: [
+      { index: true, element: <Home /> },
+      { path: "services", element: <Services /> },
+      { path: "about", element: <About /> },
+      { path: "blog", element: <Blog /> },
+      { path: "blog/:id", element: <BlogDetails /> },
+      { path: "contact", element: <Contact /> },
+    ],
+  },
+]);
