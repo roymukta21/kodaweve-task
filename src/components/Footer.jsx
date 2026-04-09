@@ -5,11 +5,18 @@ export default function Footer() {
     <footer className="bg-gray-900 text-gray-300 px-6 py-10">
       <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-8">
         {/* Brand */}
-        <div>
-          <h2 className="text-2xl font-bold text-white">Task</h2>
-          <p className="mt-3 text-sm text-gray-400">
-            Discover, manage and join amazing events easily. Built with ❤️ using
-            React.
+         <div className="col-span-1 md:col-span-2 space-y-6">
+          <Link to="/" className="flex items-center gap-2">
+            <div className="w-10 h-10 bg-white rounded-xl flex items-center justify-center font-bold text-gray-900 shadow-lg">
+              G
+            </div>
+            <span className="text-2xl font-bold tracking-tighter text-white">
+              Gradia
+            </span>
+          </Link>
+          <p className="max-w-xs text-base text-gray-500 leading-relaxed">
+            Discover, manage and join amazing events easily. Providing world-class 
+            creative craftsmanship for modern teams.
           </p>
         </div>
 

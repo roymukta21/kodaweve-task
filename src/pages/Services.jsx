@@ -44,7 +44,8 @@ const Services = () => {
       </motion.div>
 
       {/* Pricing Section */}
-      <h2 className="text-3xl font-bold text-center mt-20 mb-10">Pricing Plans</h2>
+     <div id="pricing-section">
+       <h2 className="text-3xl font-bold text-center mt-20 mb-10">Pricing Plans</h2>
 
       <motion.div
         className="max-w-6xl mx-auto grid md:grid-cols-3 gap-10 perspective-1000"
@@ -71,6 +72,7 @@ const Services = () => {
           </motion.div>
         ))}
       </motion.div>
+     </div>
     </div>
   );
 };
