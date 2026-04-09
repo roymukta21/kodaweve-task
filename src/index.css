@@ -1,28 +1,26 @@
 @import "tailwindcss";
+
 @layer components {
+  /* Button Styling */
   .btn {
     @apply relative overflow-hidden px-8 py-3 rounded-full font-semibold tracking-wide 
            transition-all duration-500 ease-out flex items-center justify-center gap-2
-           mx-auto w-fit mt-5 z-10; 
+           z-10 cursor-pointer; 
     
-    background: linear-gradient(135deg, #a855f7 0%, #6366f1 100%);
+    /* Background-ke priority dewar jonno !important use kora hoyeche */
+    background: linear-gradient(135deg, #a855f7 0%, #6366f1 100%) !important;
     box-shadow: 0 4px 15px rgba(168, 85, 247, 0.2);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    color: white;
+    color: #ffffff !important;
   }
 
   .btn:hover {
     @apply scale-105 -translate-y-1 shadow-2xl;
-    background: linear-gradient(135deg, #9333ea 0%, #4f46e5 100%);
+    background: linear-gradient(135deg, #9333ea 0%, #4f46e5 100%) !important;
     box-shadow: 0 10px 25px rgba(168, 85, 247, 0.4);
-    border-color: rgba(255, 255, 255, 0.3);
   }
 
-  .btn:active {
-    @apply scale-95 translate-y-0 shadow-inner;
-  }
-
-  /* Shine Animation Effect */
+  /* Shine animation component */
   .btn::after {
     content: '';
     @apply absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent;
@@ -33,4 +31,33 @@
   .btn:hover::after {
     transform: translateX(100%);
   }
+}
+
+@plugin "daisyui" {
+  themes: light --default;
+}
+
+@plugin "daisyui/theme" {
+  name: "light";
+  default: true;
+  --color-primary: #4338ca; 
+  --color-primary-content: #ffffff;
+  --color-secondary: #d946ef;
+  --color-secondary-content: #ffffff;
+  --color-base-100: #ffffff;
+  --color-neutral: #1e293b;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply min-h-screen antialiased text-slate-900;
+  background-color: #ffffff;
+  background-image: 
+    radial-gradient(at 85% 15%, oklch(70% 0.15 15 / 0.12) 0%, transparent 50%),
+    radial-gradient(at 50% 70%, oklch(90% 0.06 80 / 0.15) 0%, transparent 50%),
+    repeating-linear-gradient(45deg, transparent, transparent 3px, rgba(0, 0, 0, 0.02) 3px, rgba(0, 0, 0, 0.02) 4px);
+  background-attachment: fixed;
 }

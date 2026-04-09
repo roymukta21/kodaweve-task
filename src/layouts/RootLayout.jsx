@@ -6,15 +6,15 @@ import FloatingHome from "../components/FloatingHome";
 
 const RootLayout = () => {
   return (
-    <div className="bg-[#030303] text-white min-h-[80vh] selection:bg-purple-500">
-      
-      <main>
+    <div className=" text-white min-h-[80vh] selection:bg-purple-500">
+      <Navbar />
+      <main className="pt-5">
         <AnimatePresence mode="wait">
           <Outlet />
         </AnimatePresence>
-        <FloatingHome/>
+        <Footer />
       </main>
-     
+      <FloatingHome />
     </div>
   );
 };

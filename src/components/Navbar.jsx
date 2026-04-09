@@ -64,7 +64,7 @@ const Navbar = () => {
             G
           </div>
           <span className={`text-xl font-bold tracking-tighter transition-colors duration-300 ${
-            scrolled ? "text-black" : "text-white"
+            scrolled ? "text-black" : "text-black"
           }`}>
             Gradia
           </span>
@@ -77,7 +77,7 @@ const Navbar = () => {
               key={link.name}
               onClick={() => handleNavClick(link.path)}
               className={`text-sm font-medium transition-all relative group ${
-                scrolled ? "text-gray-700 hover:text-black" : "text-white/80 hover:text-white"
+                scrolled ? "text-gray-700 hover:text-black" : "text-black hover:text-black"
               }`}
             >
               {link.name}
@@ -100,7 +100,7 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Toggle */}
-        <div className={`md:hidden transition-colors ${scrolled ? "text-black" : "text-white"}`}>
+        <div className={`md:hidden transition-colors ${scrolled ? "text-black" : "text-black"}`}>
           <button onClick={() => setOpen(!open)}>
             {open ? <FaTimes size={22} /> : <FaBars size={22} />}
           </button>

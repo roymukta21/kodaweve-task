@@ -5,9 +5,9 @@ const FloatingHome = () => {
   return (
     <Link
       to="/"
-      className="fixed bottom-5 right-5 btn z-50"
+      className="fixed bottom-10 right-10 btn z-50 !p-0 !w-14 !h-14 rounded-full shadow-2xl flex items-center justify-center hover:rotate-12 transition-transform duration-300"
     >
-      <FaHome size={20} />
+      <FaHome size={24} />
     </Link>
   );
 };

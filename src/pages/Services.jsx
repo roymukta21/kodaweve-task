@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import ServiceCard from "../components/ServiceCard";
+
 const Services = () => {
   const services = [
     { title: "Web Development", desc: "Full-stack modern websites", icon: "🌐" },
@@ -46,11 +47,13 @@ const Services = () => {
           className="text-center mb-16 space-y-4"
         >
           <span className="text-purple-600 font-bold tracking-widest uppercase text-xs">Our Expertise</span>
-          <h1 className="text-4xl md:text-5xl font-black text-gray-300 italic">High-end solutions</h1>
+          <h1 className="text-4xl md:text-5xl font-black text-slate-900 italic leading-tight">
+            High-end solutions
+          </h1>
         </motion.div>
 
         <motion.div
-          className="grid md:grid-cols-3 gap-8"
+          className="grid grid-cols-1 md:grid-cols-3 gap-8"
           variants={containerVariants}
           initial="hidden"
           whileInView="show"
@@ -61,7 +64,7 @@ const Services = () => {
               key={i}
               variants={cardVariants}
               whileHover="hover"
-              className="group backdrop-blur-xl border border-white p-8 rounded-[40px] shadow-sm hover:shadow-2xl transition-all duration-500"
+              className="group bg-white/40 backdrop-blur-xl border border-white p-8 rounded-[40px] shadow-sm hover:shadow-2xl transition-all duration-500"
             >
               <div className="text-4xl mb-6">{service.icon}</div>
               <ServiceCard title={service.title} desc={service.desc} />
@@ -76,13 +79,13 @@ const Services = () => {
         <motion.h2 
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          className="text-3xl md:text-4xl font-black text-center mb-16 text-gray-300 italic"
+          className="text-3xl md:text-4xl font-black text-center mb-16 text-slate-900 italic"
         >
           Flexible Pricing
         </motion.h2>
 
         <motion.div
-          className="grid md:grid-cols-3 gap-8"
+          className="grid grid-cols-1 md:grid-cols-3 gap-8"
           variants={containerVariants}
           initial="hidden"
           whileInView="show"
@@ -93,12 +96,14 @@ const Services = () => {
               key={i}
               variants={cardVariants}
               whileHover={{ y: -10, scale: 1.02 }}
-              className={`relative p-10 rounded-[40px] border transition-all duration-500 ${
-                i === 1 ? 'bg-gray-900 text-white shadow-2xl scale-105 z-10' : 'bg-white/80 text-gray-900 border-gray-100 shadow-sm'
+              className={`relative p-10 rounded-[40px] border transition-all duration-500 flex flex-col ${
+                i === 1 
+                  ? 'bg-slate-900 text-white shadow-2xl scale-105 z-10' 
+                  : 'bg-white/60 text-slate-900 border-white shadow-sm'
               }`}
             >
               {i === 1 && (
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-purple-500 text-white text-[10px] font-bold px-4 py-1 rounded-full uppercase tracking-tighter">
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-purple-500 text-white text-[10px] font-bold px-4 py-1 rounded-full uppercase tracking-tighter shadow-lg">
                   Most Popular
                 </div>
               )}
@@ -108,17 +113,16 @@ const Services = () => {
                 <span className="text-sm opacity-60">/month</span>
               </div>
               
-              <ul className="space-y-4 mb-8 text-sm">
+              <ul className="space-y-4 mb-8 text-sm flex-grow">
                 {plan.features.map((feat, idx) => (
                   <li key={idx} className="flex items-center gap-2">
-                    <span className="text-purple-500">✔</span> {feat}
+                    <span className="text-purple-500 font-bold">✔</span> {feat}
                   </li>
                 ))}
               </ul>
 
-              <button className={`w-full py-4 rounded-full btn ${
-                i === 1 ? 'bg-white text-black hover:bg-gray-200' : 'bg-gray-900 text-white hover:bg-black'
-              }`}>
+              {/* Using the global .btn class from your index.css */}
+              <button className="btn w-full !mt-auto">
                 Choose Plan
               </button>
             </motion.div>
