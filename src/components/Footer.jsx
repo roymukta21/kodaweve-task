@@ -1,65 +1,51 @@
-import React from 'react';
+export default function Footer() {
+  return (
+    <footer className="bg-gray-900 text-gray-300 px-6 py-10">
+      <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-8">
+        {/* Brand */}
+        <div>
+          <h2 className="text-2xl font-bold text-white">EventHub</h2>
+          <p className="mt-3 text-sm text-gray-400">
+            Discover, manage and join amazing events easily. Built with ❤️ using
+            React.
+          </p>
+        </div>
 
-const Footer = () => {
-    return (
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
+        {/* Links */}
+        <div>
+          <h3 className="text-lg font-semibold text-white mb-3">Quick Links</h3>
+          <ul className="space-y-2 text-sm">
+            <li className="hover:text-white cursor-pointer">Home</li>
+            <li className="hover:text-white cursor-pointer">Events</li>
+            <li className="hover:text-white cursor-pointer">About</li>
+            <li className="hover:text-white cursor-pointer">Contact</li>
           </ul>
         </div>
-    );
-};
 
-export default Footer;
+        {/* Social */}
+        <div>
+          <h3 className="text-lg font-semibold text-white mb-3">Connect</h3>
+          <div className="flex gap-4">
+            <a href="#" className="hover:text-white">
+              <img src="./github.png" alt="" className="w-5 h-5" />
+            </a>
+            <a href="#" className="hover:text-white">
+              <img src="./linkedin.png" alt="" className="w-5 h-5" />
+            </a>
+            <a href="#" className="hover:text-white">
+              <img src="/facebook.png" alt="facebook" className="w-5 h-5" />
+            </a>
+            <a href="#" className="hover:text-white">
+              <img src="./send.png" alt="" className="w-5 h-5" />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {/* Bottom */}
+      <div className="border-t border-gray-700 mt-10 pt-5 text-center text-sm text-gray-500">
+        © {new Date().getFullYear()} Kodawave-Task. All rights reserved.
+      </div>
+    </footer>
+  );
+}
