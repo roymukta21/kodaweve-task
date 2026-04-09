@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+// import { BrowserRouter, Routes, Route } from "react-router";
 
 import Home from "../pages/Home";
 import Services from "../pages/Services";
@@ -6,6 +6,7 @@ import About from "../pages/About";
 import Blog from "../pages/Blog";
 import BlogDetails from "../pages/BlogDetails";
 import Contact from "../pages/Contact";
+import { BrowserRouter, Route, Routes } from "react-router";
 
 const Router = () => {
   return (
