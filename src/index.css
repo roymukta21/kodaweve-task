@@ -1,4 +1,4 @@
-@import "tailwindcss";
+ @import "tailwindcss";
 @plugin "daisyui" {
   themes: light --default, dark --prefersdark;
 }
@@ -18,5 +18,5 @@
 @custom-variant dark (&:where([data-theme=dark], .[data-theme=dark ]*));
 
 .btn {
-  @apply bg-white text-primary border border-primary rounded-md px-4 py-2 hover:bg-secondary hover:text-white transition;
+ @apply mt-5 bg-gradient-to-r from-purple-500 to-indigo-500 text-white p-4 rounded-full shadow-lg hover:bg-purple-800 transition duration-300;
 }

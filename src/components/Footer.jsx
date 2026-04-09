@@ -1,10 +1,12 @@
+import { Link } from "react-router";
+
 export default function Footer() {
   return (
     <footer className="bg-gray-900 text-gray-300 px-6 py-10">
       <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-8">
         {/* Brand */}
         <div>
-          <h2 className="text-2xl font-bold text-white">EventHub</h2>
+          <h2 className="text-2xl font-bold text-white">Task</h2>
           <p className="mt-3 text-sm text-gray-400">
             Discover, manage and join amazing events easily. Built with ❤️ using
             React.
@@ -15,10 +17,9 @@ export default function Footer() {
         <div>
           <h3 className="text-lg font-semibold text-white mb-3">Quick Links</h3>
           <ul className="space-y-2 text-sm">
-            <li className="hover:text-white cursor-pointer">Home</li>
-            <li className="hover:text-white cursor-pointer">Events</li>
-            <li className="hover:text-white cursor-pointer">About</li>
-            <li className="hover:text-white cursor-pointer">Contact</li>
+          <Link to="/">Home</Link><br />
+          <Link to="/services">Services</Link><br />
+          <Link to="/contact">Contact</Link>
           </ul>
         </div>
 

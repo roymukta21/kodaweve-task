@@ -18,7 +18,7 @@ const ContactForm = () => {
         className="w-full mb-4 p-3 rounded-lg bg-black/40 text-white"
       ></textarea>
 
-      <button className="w-full py-3 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-xl">
+      <button className="w-full py-3 rounded-xl btn">
         Send Message
       </button>
     </form>

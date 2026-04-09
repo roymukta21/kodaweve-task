@@ -17,7 +17,7 @@ const Services = () => {
           <div key={i} className="p-6 border border-white/20 rounded-2xl text-center">
             <h2 className="text-2xl font-bold">{plan}</h2>
             <p className="mt-2 text-gray-400">$99/month</p>
-            <button className="mt-4 px-4 py-2 bg-purple-500 rounded-lg">
+            <button className="btn">
               Choose Plan
             </button>
           </div>
