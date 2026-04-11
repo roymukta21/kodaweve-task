@@ -6,6 +6,7 @@ import About from "../pages/About";
 import Blog from "../pages/Blog";
 import BlogDetails from "../pages/BlogDetails";
 import Contact from "../pages/Contact";
+import ServicesSection from "../components/ServicesSection";
 
 export const router = createBrowserRouter([
   {
@@ -13,6 +14,7 @@ export const router = createBrowserRouter([
     element: <RootLayout />,
     children: [
       { index: true, element: <Home /> },
+      { path: "servicesection", element: <ServicesSection /> },
       { path: "services", element: <Services /> },
       { path: "about", element: <About /> },
       { path: "blog", element: <Blog /> },

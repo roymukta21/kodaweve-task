@@ -121,7 +121,7 @@ const Services = () => {
                 ))}
               </ul>
 
-              {/* Using the global .btn class from your index.css */}
+            
               <button className="btn w-full !mt-auto">
                 Choose Plan
               </button>
